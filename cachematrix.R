@@ -29,7 +29,7 @@ cacheSolve <- function(x, ...) {
   }
   
   data <- x$get()
-  invertedMatrix <- solve(data)
-  x$getInvMatrix(invertedMatrix)
+  invertedMatrix <- solve(data, ...)
+  x$setInvMatrix(invertedMatrix)
   invertedMatrix
 }
